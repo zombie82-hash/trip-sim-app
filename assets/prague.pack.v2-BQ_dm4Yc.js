@@ -1,0 +1,1 @@
+var e=new URL(`prague.pack.v2-Bqn6afU2.json`,import.meta.url).href;export{e as default};

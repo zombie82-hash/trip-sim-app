@@ -1,0 +1,15 @@
+{
+  "name": "여행 시뮬레이터",
+  "short_name": "여행시뮬",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "lang": "ko",
+  "background_color": "#ffffff",
+  "theme_color": "#0b5cad",
+  "icons": [
+    { "src": "./icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "./icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" },
+    { "src": "./icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}
