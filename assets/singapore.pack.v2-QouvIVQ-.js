@@ -1,0 +1,1 @@
+var e=new URL(`singapore.pack.v2-DxDRgm84.json`,import.meta.url).href;export{e as default};

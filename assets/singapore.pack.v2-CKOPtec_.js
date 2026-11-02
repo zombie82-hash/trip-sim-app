@@ -1,1 +1,0 @@
-var e=new URL(`singapore.pack.v2-VNoaUjbp.json`,import.meta.url).href;export{e as default};

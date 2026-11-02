@@ -1,0 +1,738 @@
+{
+  "schemaVersion": "2.0",
+  "packId": "tst-2026a",
+  "packVersion": "0.1.0-draft",
+  "status": "draft",
+  "city": {
+    "id": "tst",
+    "nameKo": "시험시",
+    "nameEn": "Testville",
+    "countryCode": "ZZ",
+    "timezone": "Etc/GMT-2",
+    "utcOffsetMinutes": 120,
+    "currency": "XTS",
+    "decimalDigits": 2,
+    "bbox": {
+      "minLat": 10,
+      "maxLat": 10.2,
+      "minLng": 20,
+      "maxLng": 20.2
+    }
+  },
+  "provenance": {
+    "checkedAt": "2026-11-01",
+    "policy": "시험용 가상 도시. 모든 값(장소·요금·운영시간·정책 숫자)은 실제 도시와 무관한 가상이며 needs-check 이다. 출시 목록(catalog.json)에 넣지 않는다.",
+    "sources": []
+  },
+  "calendar": {
+    "timezone": "Etc/GMT-2",
+    "sets": [
+      {
+        "id": "weekend",
+        "kind": "weekly",
+        "days": [
+          5,
+          6
+        ],
+        "label": "금·토 휴일"
+      },
+      {
+        "id": "nationalDays",
+        "isHoliday": true,
+        "kind": "dateList",
+        "label": "가상 국경일",
+        "verify": "needs-check",
+        "dates": [
+          {
+            "date": "2026-11-10",
+            "name": "시험 건국일"
+          },
+          {
+            "date": "2026-11-11",
+            "name": "시험 기념일"
+          }
+        ]
+      },
+      {
+        "id": "festivalWeek",
+        "kind": "rangeList",
+        "label": "가상 축제 주간",
+        "verify": "needs-check",
+        "ranges": [
+          {
+            "from": "2026-11-16",
+            "to": "2026-11-18"
+          }
+        ]
+      }
+    ]
+  },
+  "regions": [
+    {
+      "id": "center",
+      "nameKo": "중앙",
+      "lat": 10.1,
+      "lng": 20.1,
+      "lodging": true,
+      "note": "시험용 중심 권역"
+    },
+    {
+      "id": "north",
+      "nameKo": "북쪽",
+      "lat": 10.15,
+      "lng": 20.1,
+      "lodging": true,
+      "note": "시험용 외곽 권역"
+    }
+  ],
+  "categories": [
+    {
+      "id": "culture",
+      "nameKo": "문화"
+    },
+    {
+      "id": "faith",
+      "nameKo": "종교"
+    }
+  ],
+  "places": [
+    {
+      "id": "museum",
+      "names": {
+        "ko": "시험 박물관",
+        "en": "museum"
+      },
+      "category": "culture",
+      "region": "center",
+      "geo": {
+        "lat": 10.1,
+        "lng": 20.1
+      },
+      "schedule": {
+        "default": [
+          {
+            "open": 540,
+            "close": 1020,
+            "lastEntry": 990
+          }
+        ],
+        "exceptions": [
+          {
+            "when": [
+              {
+                "fact": "weekday",
+                "op": "eq",
+                "value": 1
+              }
+            ],
+            "closed": true,
+            "label": "월요일 휴관",
+            "verify": "needs-check"
+          }
+        ]
+      },
+      "tariff": {
+        "unit": "person",
+        "selection": "firstMatch",
+        "tiers": [
+          {
+            "id": "adult",
+            "when": [],
+            "amount": 10,
+            "appliesTo": {
+              "ageMin": 13
+            },
+            "label": "성인"
+          },
+          {
+            "id": "child",
+            "when": [],
+            "amount": 5,
+            "appliesTo": {
+              "ageMax": 12
+            },
+            "label": "아동"
+          }
+        ]
+      },
+      "constraints": [],
+      "demand": {
+        "queue": [],
+        "timedEntry": null
+      },
+      "tags": [
+        "indoor"
+      ],
+      "dwellMin": 60,
+      "outdoor": false,
+      "verify": "needs-check",
+      "sourceId": null,
+      "note": "시험용 가상 장소. 모든 값은 가상이며 실제와 무관하다.",
+      "accessibility": {
+        "stepFree": true,
+        "stairs": 0,
+        "elevator": true,
+        "restAreas": 1,
+        "restroom": true,
+        "slopeM": 0,
+        "verify": "needs-check"
+      }
+    },
+    {
+      "id": "plaza",
+      "names": {
+        "ko": "시험 광장",
+        "en": "plaza"
+      },
+      "category": "culture",
+      "region": "center",
+      "geo": {
+        "lat": 10.105,
+        "lng": 20.105
+      },
+      "schedule": {
+        "default": [
+          {
+            "open": 0,
+            "close": 1440,
+            "lastEntry": 1440
+          }
+        ],
+        "exceptions": []
+      },
+      "tariff": {
+        "unit": "person",
+        "selection": "firstMatch",
+        "tiers": [
+          {
+            "id": "adult",
+            "when": [],
+            "amount": 0,
+            "appliesTo": {
+              "ageMin": 13
+            },
+            "label": "성인"
+          },
+          {
+            "id": "child",
+            "when": [],
+            "amount": 0,
+            "appliesTo": {
+              "ageMax": 12
+            },
+            "label": "아동"
+          }
+        ]
+      },
+      "constraints": [],
+      "demand": {
+        "queue": [],
+        "timedEntry": null
+      },
+      "tags": [
+        "outdoor"
+      ],
+      "dwellMin": 30,
+      "outdoor": true,
+      "verify": "needs-check",
+      "sourceId": null,
+      "note": "시험용 가상 장소. 모든 값은 가상이며 실제와 무관하다.",
+      "accessibility": {
+        "stepFree": true,
+        "stairs": 0,
+        "elevator": true,
+        "restAreas": 1,
+        "restroom": true,
+        "slopeM": 0,
+        "verify": "needs-check"
+      }
+    },
+    {
+      "id": "hall",
+      "names": {
+        "ko": "시험 홀",
+        "en": "hall"
+      },
+      "category": "culture",
+      "region": "north",
+      "geo": {
+        "lat": 10.15,
+        "lng": 20.1
+      },
+      "schedule": {
+        "default": [
+          {
+            "open": 600,
+            "close": 1140,
+            "lastEntry": 1110
+          }
+        ],
+        "exceptions": [
+          {
+            "when": [
+              {
+                "fact": "daySets",
+                "op": "has",
+                "value": "nationalDays"
+              }
+            ],
+            "closed": true,
+            "label": "공휴일 휴관",
+            "verify": "needs-check"
+          }
+        ]
+      },
+      "tariff": {
+        "unit": "person",
+        "selection": "firstMatch",
+        "tiers": [
+          {
+            "id": "adult",
+            "when": [],
+            "amount": 10,
+            "appliesTo": {
+              "ageMin": 13
+            },
+            "label": "성인"
+          },
+          {
+            "id": "child",
+            "when": [],
+            "amount": 5,
+            "appliesTo": {
+              "ageMax": 12
+            },
+            "label": "아동"
+          }
+        ]
+      },
+      "constraints": [],
+      "demand": {
+        "queue": [],
+        "timedEntry": null
+      },
+      "tags": [
+        "indoor"
+      ],
+      "dwellMin": 90,
+      "outdoor": false,
+      "verify": "needs-check",
+      "sourceId": null,
+      "note": "시험용 가상 장소. 모든 값은 가상이며 실제와 무관하다.",
+      "accessibility": {
+        "stepFree": true,
+        "stairs": 0,
+        "elevator": true,
+        "restAreas": 1,
+        "restroom": true,
+        "slopeM": 0,
+        "verify": "needs-check"
+      }
+    },
+    {
+      "id": "shrine",
+      "names": {
+        "ko": "시험 사당",
+        "en": "shrine"
+      },
+      "category": "faith",
+      "region": "north",
+      "geo": {
+        "lat": 10.145,
+        "lng": 20.095
+      },
+      "schedule": {
+        "default": [
+          {
+            "open": 480,
+            "close": 1080,
+            "lastEntry": 1050
+          }
+        ],
+        "exceptions": []
+      },
+      "tariff": {
+        "unit": "person",
+        "selection": "firstMatch",
+        "tiers": [
+          {
+            "id": "adult",
+            "when": [],
+            "amount": 0,
+            "appliesTo": {
+              "ageMin": 13
+            },
+            "label": "성인"
+          },
+          {
+            "id": "child",
+            "when": [],
+            "amount": 0,
+            "appliesTo": {
+              "ageMax": 12
+            },
+            "label": "아동"
+          }
+        ]
+      },
+      "constraints": [
+        {
+          "id": "shrine.seating",
+          "type": "segregation",
+          "severity": "info",
+          "requires": [],
+          "requiresGender": true,
+          "prepMinutes": 0,
+          "question": "사당 입구가 구역별로 나뉩니다. 안내를 위해 성별을 알려주세요. (시험용 가상 질문)",
+          "label": "사당 구역 분리 (가상)",
+          "genderRules": [
+            {
+              "when": [
+                {
+                  "fact": "gender",
+                  "op": "eq",
+                  "value": "female"
+                }
+              ],
+              "status": "prep",
+              "prepMinutes": 0,
+              "label": "A 구역 이용 (가상)"
+            },
+            {
+              "when": [
+                {
+                  "fact": "gender",
+                  "op": "eq",
+                  "value": "male"
+                }
+              ],
+              "status": "prep",
+              "prepMinutes": 5,
+              "label": "B 구역 이용 · 준비 5분 (가상)"
+            }
+          ],
+          "verify": "needs-check"
+        }
+      ],
+      "demand": {
+        "queue": [],
+        "timedEntry": null
+      },
+      "tags": [
+        "indoor"
+      ],
+      "dwellMin": 45,
+      "outdoor": false,
+      "verify": "needs-check",
+      "sourceId": null,
+      "note": "시험용 가상 장소. 모든 값은 가상이며 실제와 무관하다.",
+      "accessibility": {
+        "stepFree": true,
+        "stairs": 0,
+        "elevator": true,
+        "restAreas": 1,
+        "restroom": true,
+        "slopeM": 0,
+        "verify": "needs-check"
+      }
+    }
+  ],
+  "transport": {
+    "defaultMode": "bus",
+    "modes": {
+      "walk": {
+        "speedKmh": 4.2,
+        "minMinutes": 2,
+        "fixedMin": 1,
+        "fixedMinGrade": "needs-check",
+        "fare": {
+          "kind": "flat",
+          "amount": 0
+        },
+        "label": "도보",
+        "fareUnit": "perPerson"
+      },
+      "bus": {
+        "boardingMin": 5,
+        "speedKmh": 16,
+        "fare": {
+          "kind": "flat",
+          "amount": 2
+        },
+        "label": "버스",
+        "fareUnit": "perPerson",
+        "fareVerify": "needs-check",
+        "fareSourceId": null
+      }
+    },
+    "routeFactor": 1.3,
+    "peakCongestion": []
+  },
+  "rules": [],
+  "policy": {
+    "entry": {
+      "optimisticMin": {
+        "value": 20,
+        "grade": "needs-check",
+        "sourceId": null
+      },
+      "pessimisticMin": {
+        "value": 60,
+        "grade": "needs-check",
+        "sourceId": null
+      }
+    },
+    "checkoutMin": {
+      "value": 15,
+      "grade": "needs-check",
+      "sourceId": null
+    },
+    "checkinMin": {
+      "value": 10,
+      "grade": "needs-check",
+      "sourceId": null
+    },
+    "pace": {
+      "slow": {
+        "value": 1.25,
+        "grade": "needs-check",
+        "sourceId": null
+      },
+      "normal": {
+        "value": 1,
+        "grade": "needs-check",
+        "sourceId": null
+      },
+      "packed": {
+        "value": 0.8,
+        "grade": "needs-check",
+        "sourceId": null
+      }
+    },
+    "startDefault": {
+      "value": 540,
+      "grade": "needs-check",
+      "sourceId": null
+    },
+    "startRange": {
+      "min": 480,
+      "max": 720
+    },
+    "budgetDefault": {
+      "value": 250,
+      "grade": "needs-check",
+      "sourceId": null
+    },
+    "budgetRange": {
+      "min": 80,
+      "max": 600
+    },
+    "partyDefault": {
+      "adults": 1,
+      "children": 0,
+      "residency": "foreigner"
+    },
+    "verdict": {
+      "slackMin": {
+        "value": 25,
+        "grade": "needs-check",
+        "sourceId": null
+      },
+      "thresholds": {
+        "returnHardMin": {
+          "value": 1380,
+          "grade": "needs-check",
+          "sourceId": null
+        },
+        "returnWarnMin": {
+          "value": 1320,
+          "grade": "needs-check",
+          "sourceId": null
+        },
+        "stopsMax": {
+          "value": 6,
+          "grade": "needs-check",
+          "sourceId": null
+        },
+        "travelFailMin": {
+          "value": 130,
+          "grade": "needs-check",
+          "sourceId": null
+        },
+        "travelWarnMin": {
+          "value": 90,
+          "grade": "needs-check",
+          "sourceId": null
+        },
+        "waitWarnMin": {
+          "value": 25,
+          "grade": "needs-check",
+          "sourceId": null
+        },
+        "budgetWarnRatio": {
+          "value": 0.85,
+          "grade": "needs-check",
+          "sourceId": null
+        }
+      },
+      "mealWindows": {
+        "lunch": {
+          "start": {
+            "value": 690,
+            "grade": "needs-check",
+            "sourceId": null
+          },
+          "end": {
+            "value": 840,
+            "grade": "needs-check",
+            "sourceId": null
+          }
+        },
+        "dinner": {
+          "start": {
+            "value": 1080,
+            "grade": "needs-check",
+            "sourceId": null
+          },
+          "end": {
+            "value": 1230,
+            "grade": "needs-check",
+            "sourceId": null
+          }
+        }
+      },
+      "profiles": {
+        "relaxed": {
+          "label": "여유",
+          "travelWarnMin": {
+            "value": 110,
+            "grade": "needs-check",
+            "sourceId": null
+          },
+          "stopsMax": {
+            "value": 5,
+            "grade": "needs-check",
+            "sourceId": null
+          },
+          "waitWarnMin": {
+            "value": 30,
+            "grade": "needs-check",
+            "sourceId": null
+          }
+        },
+        "normal": {
+          "label": "보통",
+          "travelWarnMin": {
+            "value": 90,
+            "grade": "needs-check",
+            "sourceId": null
+          },
+          "stopsMax": {
+            "value": 6,
+            "grade": "needs-check",
+            "sourceId": null
+          },
+          "waitWarnMin": {
+            "value": 25,
+            "grade": "needs-check",
+            "sourceId": null
+          }
+        },
+        "efficient": {
+          "label": "효율",
+          "travelWarnMin": {
+            "value": 150,
+            "grade": "needs-check",
+            "sourceId": null
+          },
+          "stopsMax": {
+            "value": 8,
+            "grade": "needs-check",
+            "sourceId": null
+          },
+          "waitWarnMin": {
+            "value": 45,
+            "grade": "needs-check",
+            "sourceId": null
+          }
+        }
+      }
+    },
+    "mobility": {
+      "askAge": true,
+      "askGender": "optional",
+      "askHealth": "optional",
+      "showAnswerSkipping": true,
+      "localOnly": true,
+      "note": "성별은 이동 파라미터에 사용하지 않는다. 복장 규정·시설 매칭에만 사용."
+    }
+  },
+  "goldenCases": [
+    {
+      "id": "T1",
+      "name": "평일 기준안 (가상)",
+      "date": "2026-11-03",
+      "lodging": "center",
+      "mode": "bus",
+      "pace": "normal",
+      "start": 540,
+      "weather": "clear",
+      "plan": [
+        "museum",
+        "plaza",
+        "hall"
+      ],
+      "expect": {
+        "endAt": 793,
+        "travelMin": 73,
+        "cost": 26,
+        "failCount": 0,
+        "askCount": 0
+      }
+    },
+    {
+      "id": "T2",
+      "name": "성별 요구 사당 · 성별 미입력은 감점 없이 질문만 (가상)",
+      "date": "2026-11-03",
+      "lodging": "center",
+      "mode": "bus",
+      "pace": "normal",
+      "start": 540,
+      "weather": "clear",
+      "plan": [
+        "museum",
+        "shrine",
+        "plaza"
+      ],
+      "gender": null,
+      "expect": {
+        "endAt": 743,
+        "travelMin": 68,
+        "cost": 16,
+        "failCount": 0,
+        "askCount": 1
+      }
+    },
+    {
+      "id": "T3",
+      "name": "가상 국경일 · 홀 휴관 (가상)",
+      "date": "2026-11-10",
+      "lodging": "center",
+      "mode": "bus",
+      "pace": "normal",
+      "start": 540,
+      "weather": "clear",
+      "plan": [
+        "hall",
+        "plaza"
+      ],
+      "expect": {
+        "endAt": 641,
+        "travelMin": 71,
+        "cost": 6,
+        "failCount": 1,
+        "askCount": 0
+      }
+    }
+  ]
+}

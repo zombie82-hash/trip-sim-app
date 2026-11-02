@@ -1,7 +1,7 @@
 {
   "schemaVersion": "2.0",
   "packId": "sin-2026a",
-  "packVersion": "0.3.0-draft",
+  "packVersion": "0.7.0-draft",
   "status": "draft",
   "city": {
     "id": "sin",
@@ -79,6 +79,7 @@
       },
       {
         "id": "publicHoliday",
+        "isHoliday": true,
         "kind": "dateList",
         "label": "공휴일",
         "verify": "verified",
@@ -1753,7 +1754,8 @@
       "walk": {
         "speedKmh": 4.6,
         "minMinutes": 3,
-        "autoUnderKm": 1.2,
+        "fixedMin": 1.5,
+        "fixedMinGrade": "estimated",
         "fare": {
           "kind": "flat",
           "amount": 0
@@ -1806,6 +1808,40 @@
       }
     ]
   },
+  "legOverrides": [
+    {
+      "from": "skypark",
+      "to": "gb",
+      "mode": "walk",
+      "routeFactor": 2.5,
+      "note": "지시서 §2.2 가정값, 미측정",
+      "grade": "estimated"
+    },
+    {
+      "from": "gb",
+      "to": "skypark",
+      "mode": "walk",
+      "routeFactor": 2.5,
+      "note": "지시서 §2.2 가정값, 미측정",
+      "grade": "estimated"
+    },
+    {
+      "from": "merlion",
+      "to": "skypark",
+      "mode": "walk",
+      "routeFactor": 1.91,
+      "note": "지시서 §2.2 가정값, 미측정",
+      "grade": "estimated"
+    },
+    {
+      "from": "skypark",
+      "to": "merlion",
+      "mode": "walk",
+      "routeFactor": 1.91,
+      "note": "지시서 §2.2 가정값, 미측정",
+      "grade": "estimated"
+    }
+  ],
   "rules": [
     {
       "id": "global.rain.travel",
@@ -1866,17 +1902,20 @@
     }
   ],
   "policy": {
+    "entry": { "optimisticMin": { "value": 30, "grade": "needs-check", "sourceId": null }, "pessimisticMin": { "value": 90, "grade": "needs-check", "sourceId": null } },
+    "checkoutMin": { "value": 25, "grade": "estimated", "sourceId": null },
+    "checkinMin": { "value": 0, "grade": "needs-check", "sourceId": null },
     "pace": {
-      "slow": 1.25,
-      "normal": 1,
-      "packed": 0.8
+      "slow": { "value": 1.25, "grade": "needs-check", "sourceId": null },
+      "normal": { "value": 1, "grade": "needs-check", "sourceId": null },
+      "packed": { "value": 0.8, "grade": "needs-check", "sourceId": null }
     },
-    "startDefault": 540,
+    "startDefault": { "value": 540, "grade": "needs-check", "sourceId": null },
     "startRange": {
       "min": 480,
       "max": 720
     },
-    "budgetDefault": 250,
+    "budgetDefault": { "value": 250, "grade": "needs-check", "sourceId": null },
     "budgetRange": {
       "min": 80,
       "max": 600
@@ -1887,48 +1926,44 @@
       "residency": "foreigner"
     },
     "verdict": {
-      "base": 100,
-      "failPenalty": 20,
-      "warnPenalty": 7,
-      "scoreMin": 38,
-      "scoreMax": 98,
+      "slackMin": { "value": 25, "grade": "needs-check", "sourceId": null },
       "thresholds": {
-        "returnLatest": 1380,
-        "returnWarn": 1320,
-        "stopsMax": 6,
-        "travelFailMin": 130,
-        "travelWarnMin": 90,
-        "waitWarnMin": 25,
-        "budgetWarnRatio": 0.85
+        "returnHardMin": { "value": 1380, "grade": "needs-check", "sourceId": null },
+        "returnWarnMin": { "value": 1320, "grade": "needs-check", "sourceId": null },
+        "stopsMax": { "value": 6, "grade": "needs-check", "sourceId": null },
+        "travelFailMin": { "value": 130, "grade": "needs-check", "sourceId": null },
+        "travelWarnMin": { "value": 90, "grade": "needs-check", "sourceId": null },
+        "waitWarnMin": { "value": 25, "grade": "needs-check", "sourceId": null },
+        "budgetWarnRatio": { "value": 0.85, "grade": "needs-check", "sourceId": null }
       },
       "mealWindows": {
         "lunch": {
-          "start": 690,
-          "end": 840
+          "start": { "value": 690, "grade": "needs-check", "sourceId": null },
+          "end": { "value": 840, "grade": "needs-check", "sourceId": null }
         },
         "dinner": {
-          "start": 1080,
-          "end": 1230
+          "start": { "value": 1080, "grade": "needs-check", "sourceId": null },
+          "end": { "value": 1230, "grade": "needs-check", "sourceId": null }
         }
       },
       "profiles": {
         "relaxed": {
           "label": "여유",
-          "travelWarnMin": 110,
-          "stopsMax": 5,
-          "waitWarnMin": 30
+          "travelWarnMin": { "value": 110, "grade": "needs-check", "sourceId": null },
+          "stopsMax": { "value": 5, "grade": "needs-check", "sourceId": null },
+          "waitWarnMin": { "value": 30, "grade": "needs-check", "sourceId": null }
         },
         "normal": {
           "label": "보통",
-          "travelWarnMin": 90,
-          "stopsMax": 6,
-          "waitWarnMin": 25
+          "travelWarnMin": { "value": 90, "grade": "needs-check", "sourceId": null },
+          "stopsMax": { "value": 6, "grade": "needs-check", "sourceId": null },
+          "waitWarnMin": { "value": 25, "grade": "needs-check", "sourceId": null }
         },
         "efficient": {
           "label": "효율",
-          "travelWarnMin": 150,
-          "stopsMax": 8,
-          "waitWarnMin": 45
+          "travelWarnMin": { "value": 150, "grade": "needs-check", "sourceId": null },
+          "stopsMax": { "value": 8, "grade": "needs-check", "sourceId": null },
+          "waitWarnMin": { "value": 45, "grade": "needs-check", "sourceId": null }
         }
       }
     },
@@ -1994,7 +2029,7 @@
       "expect": {
         "endAt": 887,
         "travelMin": 62,
-        "cost": 94.2,
+        "cost": 95.6,
         "failCount": 0,
         "askCount": 0
       }
@@ -2017,7 +2052,7 @@
       "expect": {
         "endAt": 1327,
         "travelMin": 62,
-        "cost": 98.2,
+        "cost": 99.6,
         "failCount": 1,
         "askCount": 0
       }
@@ -2040,7 +2075,7 @@
       "expect": {
         "endAt": 1327,
         "travelMin": 62,
-        "cost": 98.2,
+        "cost": 99.6,
         "failCount": 0,
         "askCount": 0
       }
@@ -2059,9 +2094,9 @@
         "skypark"
       ],
       "expect": {
-        "endAt": 1138,
-        "travelMin": 18,
-        "cost": 85,
+        "endAt": 1144,
+        "travelMin": 24,
+        "cost": 86.4,
         "failCount": 0,
         "askCount": 0
       }
@@ -2080,8 +2115,8 @@
         "maxwell"
       ],
       "expect": {
-        "endAt": 719,
-        "travelMin": 9,
+        "endAt": 722,
+        "travelMin": 12,
         "cost": 8,
         "failCount": 0,
         "askCount": 0
@@ -2105,7 +2140,7 @@
       "expect": {
         "endAt": 939,
         "travelMin": 74,
-        "cost": 94.2,
+        "cost": 95.6,
         "failCount": 0,
         "askCount": 0
       }
