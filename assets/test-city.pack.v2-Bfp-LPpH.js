@@ -1,0 +1,1 @@
+var e=new URL(`test-city.pack.v2-ZaCLPlFa.json`,import.meta.url).href;export{e as default};

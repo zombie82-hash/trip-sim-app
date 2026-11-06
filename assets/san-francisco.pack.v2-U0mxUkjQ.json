@@ -1,0 +1,1708 @@
+{
+  "schemaVersion": "2.0",
+  "packId": "sfo-2026a",
+  "packVersion": "0.3.0-draft",
+  "status": "draft",
+  "city": {
+    "id": "sfo",
+    "nameKo": "샌프란시스코",
+    "nameEn": "San Francisco",
+    "countryCode": "US",
+    "timezone": "America/Los_Angeles",
+    "utcOffsetMinutes": -420,
+    "currency": "USD",
+    "currencySymbol": "$",
+    "decimalDigits": 2,
+    "bbox": {
+      "minLat": 37.7,
+      "maxLat": 37.83,
+      "minLng": -122.52,
+      "maxLng": -122.35
+    }
+  },
+  "provenance": {
+    "checkedAt": "2026-10-31",
+    "policy": "verified=공식 확인 / estimated=근사 / needs-check=출시 전 재확인 / illustrative=구조 설명용",
+    "sources": [
+      {
+        "id": "nps-alcatraz",
+        "label": "NPS — Alcatraz Fees & Passes",
+        "url": "https://www.nps.gov/alca/planyourvisit/fees.htm"
+      },
+      {
+        "id": "sfmta-fares",
+        "label": "SFMTA — Fares",
+        "url": "https://www.sfmta.com/getting-around/muni/fares"
+      },
+      {
+        "id": "sfmta-cable",
+        "label": "SFMTA — Cable Car Single Ride",
+        "url": "https://www.sfmta.com/fares/cable-car-single-ride"
+      }
+    ]
+  },
+  "calendar": {
+    "timezone": "America/Los_Angeles",
+    "sets": [
+      {
+        "id": "weekend",
+        "kind": "weekly",
+        "days": [
+          0,
+          6
+        ],
+        "label": "주말"
+      },
+      {
+        "id": "publicHoliday",
+        "isHoliday": true,
+        "kind": "dateList",
+        "label": "미국 연방 공휴일",
+        "verify": "needs-check",
+        "dates": [
+          {
+            "date": "2026-01-01",
+            "name": "New Year's Day"
+          },
+          {
+            "date": "2026-01-19",
+            "name": "MLK Day"
+          },
+          {
+            "date": "2026-02-16",
+            "name": "Presidents' Day"
+          },
+          {
+            "date": "2026-05-25",
+            "name": "Memorial Day"
+          },
+          {
+            "date": "2026-06-19",
+            "name": "Juneteenth"
+          },
+          {
+            "date": "2026-07-04",
+            "name": "Independence Day"
+          },
+          {
+            "date": "2026-09-07",
+            "name": "Labor Day"
+          },
+          {
+            "date": "2026-10-12",
+            "name": "Columbus Day"
+          },
+          {
+            "date": "2026-11-11",
+            "name": "Veterans Day"
+          },
+          {
+            "date": "2026-11-26",
+            "name": "Thanksgiving"
+          },
+          {
+            "date": "2026-12-25",
+            "name": "Christmas Day"
+          }
+        ]
+      },
+      {
+        "id": "summer",
+        "kind": "rangeList",
+        "label": "여름 성수기(6–8월)",
+        "verify": "estimated",
+        "ranges": [
+          {
+            "from": "2026-06-01",
+            "to": "2026-08-31"
+          }
+        ]
+      },
+      {
+        "id": "fleetWeek",
+        "kind": "rangeList",
+        "label": "함대 주간",
+        "verify": "needs-check",
+        "ranges": [
+          {
+            "from": "2026-10-05",
+            "to": "2026-10-12"
+          }
+        ]
+      }
+    ]
+  },
+  "regions": [
+    {
+      "id": "union",
+      "nameKo": "유니언스퀘어·다운타운",
+      "lat": 37.788,
+      "lng": -122.4074,
+      "lodging": true,
+      "note": "교통 중심"
+    },
+    {
+      "id": "wharf",
+      "nameKo": "피셔맨스워프",
+      "lat": 37.8087,
+      "lng": -122.4098,
+      "lodging": true,
+      "note": "관광 중심"
+    },
+    {
+      "id": "northbeach",
+      "nameKo": "노스비치",
+      "lat": 37.8,
+      "lng": -122.41,
+      "lodging": true,
+      "note": "이탈리안·조용함"
+    },
+    {
+      "id": "mission",
+      "nameKo": "미션",
+      "lat": 37.7599,
+      "lng": -122.4148,
+      "lodging": true,
+      "note": "로컬 미식·음악"
+    },
+    {
+      "id": "soma",
+      "nameKo": "소마·모스코니",
+      "lat": 37.7785,
+      "lng": -122.4056,
+      "lodging": true,
+      "note": "박물관·컨벤션"
+    },
+    {
+      "id": "marina",
+      "nameKo": "마리나·프레시디오",
+      "lat": 37.7999,
+      "lng": -122.44,
+      "lodging": true,
+      "note": "금문교 도보권"
+    },
+    {
+      "id": "sunset",
+      "nameKo": "선셋",
+      "lat": 37.76,
+      "lng": -122.49,
+      "lodging": true,
+      "note": "해변·현지"
+    }
+  ],
+  "categories": [
+    {
+      "id": "food",
+      "nameKo": "미식"
+    },
+    {
+      "id": "night",
+      "nameKo": "야경"
+    },
+    {
+      "id": "nature",
+      "nameKo": "자연"
+    },
+    {
+      "id": "culture",
+      "nameKo": "문화"
+    },
+    {
+      "id": "shopping",
+      "nameKo": "쇼핑"
+    },
+    {
+      "id": "activity",
+      "nameKo": "액티비티"
+    }
+  ],
+  "places": [
+    {
+      "id": "alcatraz",
+      "names": {
+        "ko": "알카트라즈",
+        "en": "Alcatraz Island"
+      },
+      "category": "activity",
+      "region": "wharf",
+      "geo": {
+        "lat": 37.8267,
+        "lng": -122.423,
+        "elevationM": 10
+      },
+      "schedule": {
+        "default": [
+          {
+            "open": 540,
+            "close": 1110,
+            "lastEntry": 1020
+          }
+        ],
+        "exceptions": []
+      },
+      "tariff": {
+        "unit": "person",
+        "selection": "firstMatch",
+        "tiers": [
+          {
+            "id": "adult-day",
+            "when": [],
+            "amount": 47.95,
+            "appliesTo": {
+              "ageMin": 13
+            },
+            "label": "성인 주간",
+            "verify": "needs-check"
+          }
+        ]
+      },
+      "booking": {
+        "required": true,
+        "leadDays": 90,
+        "timedEntry": true,
+        "channel": "official-ferry",
+        "verify": "needs-check",
+        "note": "90일 전 오픈. 성수기·주말은 수 주 전 매진"
+      },
+      "constraints": [],
+      "demand": {
+        "queue": [
+          {
+            "from": 540,
+            "to": 1110,
+            "waitMin": 15
+          }
+        ],
+        "timedEntry": {
+          "required": true,
+          "granularityMin": 30
+        }
+      },
+      "tags": [
+        "outdoor",
+        "ticketed",
+        "boat"
+      ],
+      "dwellMin": 210,
+      "outdoor": true,
+      "verify": "needs-check",
+      "note": "페리 탑승 시간 고정. 90일 전 예약 오픈 — 미예약이면 일정 자체가 불가.",
+      "accessibility": {
+        "stepFree": false,
+        "stairs": 60,
+        "elevator": false,
+        "restAreas": 2,
+        "restroom": true,
+        "slopeM": 25,
+        "verify": "estimated"
+      }
+    },
+    {
+      "id": "ggb",
+      "names": {
+        "ko": "금문교",
+        "en": "Golden Gate Bridge"
+      },
+      "category": "nature",
+      "region": "marina",
+      "geo": {
+        "lat": 37.8199,
+        "lng": -122.4783,
+        "elevationM": 20
+      },
+      "schedule": {
+        "default": [
+          {
+            "open": 0,
+            "close": 1440,
+            "lastEntry": 1440
+          }
+        ],
+        "exceptions": []
+      },
+      "tariff": {
+        "unit": "person",
+        "selection": "firstMatch",
+        "tiers": [
+          {
+            "id": "free",
+            "when": [],
+            "amount": 0,
+            "appliesTo": {
+              "ageMin": 0
+            },
+            "label": "무료"
+          }
+        ]
+      },
+      "constraints": [],
+      "demand": {
+        "queue": [],
+        "timedEntry": null
+      },
+      "tags": [
+        "outdoor",
+        "free",
+        "windy"
+      ],
+      "dwellMin": 60,
+      "outdoor": true,
+      "verify": "estimated",
+      "note": "도보 횡단 시 바람·한랭 대비.",
+      "accessibility": {
+        "stepFree": true,
+        "stairs": 0,
+        "elevator": true,
+        "restAreas": 2,
+        "restroom": true,
+        "slopeM": 0,
+        "verify": "estimated"
+      }
+    },
+    {
+      "id": "ggpark",
+      "names": {
+        "ko": "골든게이트 파크",
+        "en": "Golden Gate Park"
+      },
+      "category": "nature",
+      "region": "sunset",
+      "geo": {
+        "lat": 37.7694,
+        "lng": -122.4862,
+        "elevationM": 40
+      },
+      "schedule": {
+        "default": [
+          {
+            "open": 300,
+            "close": 1440,
+            "lastEntry": 1440
+          }
+        ],
+        "exceptions": []
+      },
+      "tariff": {
+        "unit": "person",
+        "selection": "firstMatch",
+        "tiers": [
+          {
+            "id": "free",
+            "when": [],
+            "amount": 0,
+            "appliesTo": {
+              "ageMin": 0
+            },
+            "label": "무료"
+          }
+        ]
+      },
+      "constraints": [],
+      "demand": {
+        "queue": [],
+        "timedEntry": null
+      },
+      "tags": [
+        "outdoor",
+        "free"
+      ],
+      "dwellMin": 100,
+      "outdoor": true,
+      "verify": "estimated",
+      "accessibility": {
+        "stepFree": true,
+        "stairs": 0,
+        "elevator": true,
+        "restAreas": 3,
+        "restroom": true,
+        "slopeM": 0,
+        "verify": "estimated"
+      }
+    },
+    {
+      "id": "deyoung",
+      "names": {
+        "ko": "드 영 미술관",
+        "en": "de Young Museum"
+      },
+      "category": "culture",
+      "region": "sunset",
+      "geo": {
+        "lat": 37.7715,
+        "lng": -122.4687,
+        "elevationM": 45
+      },
+      "schedule": {
+        "default": [
+          {
+            "open": 570,
+            "close": 1020,
+            "lastEntry": 1000
+          }
+        ],
+        "exceptions": [
+          {
+            "when": [
+              {
+                "fact": "weekday",
+                "op": "eq",
+                "value": 1
+              }
+            ],
+            "closed": true,
+            "label": "월요일 휴관",
+            "verify": "needs-check"
+          }
+        ]
+      },
+      "tariff": {
+        "unit": "person",
+        "selection": "firstMatch",
+        "tiers": [
+          {
+            "id": "adult",
+            "when": [],
+            "amount": 20,
+            "appliesTo": {
+              "ageMin": 18
+            },
+            "label": "성인",
+            "verify": "needs-check"
+          }
+        ]
+      },
+      "constraints": [],
+      "demand": {
+        "queue": [
+          {
+            "from": 570,
+            "to": 1020,
+            "waitMin": 10
+          }
+        ],
+        "timedEntry": null
+      },
+      "tags": [
+        "indoor",
+        "ticketed",
+        "cultural"
+      ],
+      "dwellMin": 95,
+      "outdoor": false,
+      "verify": "needs-check",
+      "note": "월요일 휴관 — 미국 박물관의 흔한 함정.",
+      "accessibility": {
+        "stepFree": true,
+        "stairs": 0,
+        "elevator": true,
+        "restAreas": 3,
+        "restroom": true,
+        "slopeM": 0,
+        "verify": "estimated"
+      }
+    },
+    {
+      "id": "calacademy",
+      "names": {
+        "ko": "캘리포니아 과학 아카데미",
+        "en": "California Academy of Sciences"
+      },
+      "category": "activity",
+      "region": "sunset",
+      "geo": {
+        "lat": 37.7699,
+        "lng": -122.4661,
+        "elevationM": 45
+      },
+      "schedule": {
+        "default": [
+          {
+            "open": 570,
+            "close": 1020,
+            "lastEntry": 990
+          }
+        ],
+        "exceptions": []
+      },
+      "tariff": {
+        "unit": "person",
+        "selection": "firstMatch",
+        "tiers": [
+          {
+            "id": "adult",
+            "when": [],
+            "amount": 44,
+            "appliesTo": {
+              "ageMin": 18
+            },
+            "label": "성인",
+            "verify": "needs-check"
+          }
+        ]
+      },
+      "constraints": [],
+      "demand": {
+        "queue": [
+          {
+            "from": 570,
+            "to": 780,
+            "waitMin": 15
+          }
+        ],
+        "timedEntry": null
+      },
+      "tags": [
+        "indoor",
+        "ticketed"
+      ],
+      "dwellMin": 150,
+      "outdoor": false,
+      "verify": "needs-check",
+      "note": "우천 시 최적 대체 일정.",
+      "accessibility": {
+        "stepFree": true,
+        "stairs": 0,
+        "elevator": true,
+        "restAreas": 3,
+        "restroom": true,
+        "slopeM": 0,
+        "verify": "estimated"
+      }
+    },
+    {
+      "id": "pier39",
+      "names": {
+        "ko": "피어 39",
+        "en": "Pier 39"
+      },
+      "category": "shopping",
+      "region": "wharf",
+      "geo": {
+        "lat": 37.8087,
+        "lng": -122.4098,
+        "elevationM": 5
+      },
+      "schedule": {
+        "default": [
+          {
+            "open": 600,
+            "close": 1320,
+            "lastEntry": 1300
+          }
+        ],
+        "exceptions": []
+      },
+      "tariff": {
+        "unit": "person",
+        "selection": "firstMatch",
+        "tiers": [
+          {
+            "id": "free",
+            "when": [],
+            "amount": 0,
+            "appliesTo": {
+              "ageMin": 0
+            },
+            "label": "무료"
+          }
+        ]
+      },
+      "constraints": [],
+      "demand": {
+        "queue": [
+          {
+            "from": 660,
+            "to": 1200,
+            "waitMin": 10
+          }
+        ],
+        "timedEntry": null
+      },
+      "tags": [
+        "indoor",
+        "free",
+        "shopping"
+      ],
+      "dwellMin": 70,
+      "outdoor": false,
+      "verify": "estimated",
+      "accessibility": {
+        "stepFree": true,
+        "stairs": 0,
+        "elevator": true,
+        "restAreas": 3,
+        "restroom": true,
+        "slopeM": 0,
+        "verify": "estimated"
+      }
+    },
+    {
+      "id": "ferrybldg",
+      "names": {
+        "ko": "페리 빌딩 마켓",
+        "en": "Ferry Building Marketplace"
+      },
+      "category": "food",
+      "region": "union",
+      "geo": {
+        "lat": 37.7955,
+        "lng": -122.3937,
+        "elevationM": 5
+      },
+      "schedule": {
+        "default": [
+          {
+            "open": 600,
+            "close": 1260,
+            "lastEntry": 1240
+          }
+        ],
+        "exceptions": []
+      },
+      "tariff": {
+        "unit": "person",
+        "selection": "firstMatch",
+        "tiers": [
+          {
+            "id": "meal",
+            "when": [],
+            "amount": 25,
+            "appliesTo": {
+              "ageMin": 0
+            },
+            "label": "1식"
+          }
+        ],
+        "adjustments": [
+          {
+            "kind": "tax",
+            "rate": 0.08625,
+            "label": "SF 판매세 8.625%",
+            "verify": "needs-check"
+          },
+          {
+            "kind": "tip",
+            "rate": 0.18,
+            "label": "팁 18%",
+            "verify": "estimated"
+          }
+        ]
+      },
+      "constraints": [],
+      "demand": {
+        "queue": [
+          {
+            "from": 660,
+            "to": 840,
+            "waitMin": 20
+          }
+        ],
+        "timedEntry": null
+      },
+      "tags": [
+        "indoor",
+        "meal"
+      ],
+      "dwellMin": 60,
+      "outdoor": false,
+      "verify": "estimated",
+      "note": "미국 식당은 세금+팁이 붙습니다 — 표시가와 실제 지출이 25% 이상 차이.",
+      "accessibility": {
+        "stepFree": true,
+        "stairs": 0,
+        "elevator": true,
+        "restAreas": 2,
+        "restroom": true,
+        "slopeM": 0,
+        "verify": "estimated"
+      }
+    },
+    {
+      "id": "coittower",
+      "names": {
+        "ko": "코이트 타워",
+        "en": "Coit Tower"
+      },
+      "category": "night",
+      "region": "northbeach",
+      "geo": {
+        "lat": 37.8024,
+        "lng": -122.4058,
+        "elevationM": 90
+      },
+      "schedule": {
+        "default": [
+          {
+            "open": 600,
+            "close": 1080,
+            "lastEntry": 1060
+          }
+        ],
+        "exceptions": []
+      },
+      "tariff": {
+        "unit": "person",
+        "selection": "firstMatch",
+        "tiers": [
+          {
+            "id": "adult",
+            "when": [],
+            "amount": 10,
+            "appliesTo": {
+              "ageMin": 18
+            },
+            "label": "성인(엘리베이터)",
+            "verify": "needs-check"
+          }
+        ]
+      },
+      "constraints": [],
+      "demand": {
+        "queue": [],
+        "timedEntry": null
+      },
+      "tags": [
+        "indoor",
+        "ticketed",
+        "night"
+      ],
+      "dwellMin": 45,
+      "outdoor": false,
+      "verify": "needs-check",
+      "note": "언덕 위 — 도보 접근 시 경사 부담.",
+      "accessibility": {
+        "stepFree": false,
+        "stairs": 2,
+        "elevator": true,
+        "restAreas": 1,
+        "restroom": true,
+        "slopeM": 45,
+        "verify": "estimated"
+      }
+    },
+    {
+      "id": "lombard",
+      "names": {
+        "ko": "롬바드 스트리트",
+        "en": "Lombard Street"
+      },
+      "category": "nature",
+      "region": "northbeach",
+      "geo": {
+        "lat": 37.8021,
+        "lng": -122.4187,
+        "elevationM": 75
+      },
+      "schedule": {
+        "default": [
+          {
+            "open": 0,
+            "close": 1440,
+            "lastEntry": 1440
+          }
+        ],
+        "exceptions": []
+      },
+      "tariff": {
+        "unit": "person",
+        "selection": "firstMatch",
+        "tiers": [
+          {
+            "id": "free",
+            "when": [],
+            "amount": 0,
+            "appliesTo": {
+              "ageMin": 0
+            },
+            "label": "무료"
+          }
+        ]
+      },
+      "constraints": [],
+      "demand": {
+        "queue": [],
+        "timedEntry": null
+      },
+      "tags": [
+        "outdoor",
+        "free",
+        "slope"
+      ],
+      "dwellMin": 30,
+      "outdoor": true,
+      "verify": "estimated",
+      "accessibility": {
+        "stepFree": false,
+        "stairs": 0,
+        "elevator": false,
+        "restAreas": 0,
+        "restroom": false,
+        "slopeM": 60,
+        "verify": "estimated"
+      }
+    },
+    {
+      "id": "unionsq",
+      "names": {
+        "ko": "유니언 스퀘어",
+        "en": "Union Square"
+      },
+      "category": "shopping",
+      "region": "union",
+      "geo": {
+        "lat": 37.788,
+        "lng": -122.4074,
+        "elevationM": 20
+      },
+      "schedule": {
+        "default": [
+          {
+            "open": 600,
+            "close": 1260,
+            "lastEntry": 1240
+          }
+        ],
+        "exceptions": []
+      },
+      "tariff": {
+        "unit": "person",
+        "selection": "firstMatch",
+        "tiers": [
+          {
+            "id": "free",
+            "when": [],
+            "amount": 0,
+            "appliesTo": {
+              "ageMin": 0
+            },
+            "label": "무료"
+          }
+        ]
+      },
+      "constraints": [],
+      "demand": {
+        "queue": [],
+        "timedEntry": null
+      },
+      "tags": [
+        "indoor",
+        "free",
+        "shopping"
+      ],
+      "dwellMin": 65,
+      "outdoor": false,
+      "verify": "estimated",
+      "accessibility": {
+        "stepFree": true,
+        "stairs": 0,
+        "elevator": true,
+        "restAreas": 3,
+        "restroom": true,
+        "slopeM": 0,
+        "verify": "estimated"
+      }
+    },
+    {
+      "id": "dolores",
+      "names": {
+        "ko": "돌로레스 파크",
+        "en": "Mission Dolores Park"
+      },
+      "category": "food",
+      "region": "mission",
+      "geo": {
+        "lat": 37.7596,
+        "lng": -122.4269,
+        "elevationM": 45
+      },
+      "schedule": {
+        "default": [
+          {
+            "open": 360,
+            "close": 1320,
+            "lastEntry": 1300
+          }
+        ],
+        "exceptions": []
+      },
+      "tariff": {
+        "unit": "person",
+        "selection": "firstMatch",
+        "tiers": [
+          {
+            "id": "meal",
+            "when": [],
+            "amount": 16,
+            "appliesTo": {
+              "ageMin": 0
+            },
+            "label": "테이크아웃 1식"
+          }
+        ],
+        "adjustments": [
+          {
+            "kind": "tax",
+            "rate": 0.08625,
+            "label": "SF 판매세",
+            "verify": "needs-check"
+          }
+        ]
+      },
+      "constraints": [],
+      "demand": {
+        "queue": [],
+        "timedEntry": null
+      },
+      "tags": [
+        "outdoor",
+        "meal",
+        "free"
+      ],
+      "dwellMin": 60,
+      "outdoor": true,
+      "verify": "estimated",
+      "accessibility": {
+        "stepFree": false,
+        "stairs": 0,
+        "elevator": false,
+        "restAreas": 1,
+        "restroom": true,
+        "slopeM": 20,
+        "verify": "estimated"
+      }
+    },
+    {
+      "id": "twinpeaks",
+      "names": {
+        "ko": "트윈 픽스",
+        "en": "Twin Peaks"
+      },
+      "category": "night",
+      "region": "mission",
+      "geo": {
+        "lat": 37.7544,
+        "lng": -122.4477,
+        "elevationM": 280
+      },
+      "schedule": {
+        "default": [
+          {
+            "open": 0,
+            "close": 1440,
+            "lastEntry": 1440
+          }
+        ],
+        "exceptions": []
+      },
+      "tariff": {
+        "unit": "person",
+        "selection": "firstMatch",
+        "tiers": [
+          {
+            "id": "free",
+            "when": [],
+            "amount": 0,
+            "appliesTo": {
+              "ageMin": 0
+            },
+            "label": "무료"
+          }
+        ]
+      },
+      "constraints": [],
+      "demand": {
+        "queue": [],
+        "timedEntry": null
+      },
+      "tags": [
+        "outdoor",
+        "free",
+        "night",
+        "slope"
+      ],
+      "dwellMin": 40,
+      "outdoor": true,
+      "verify": "estimated",
+      "note": "해 질 무렵 조망. 차량·택시 접근이 일반적.",
+      "accessibility": {
+        "stepFree": true,
+        "stairs": 0,
+        "elevator": false,
+        "restAreas": 0,
+        "restroom": false,
+        "slopeM": 5,
+        "verify": "estimated"
+      }
+    },
+    {
+      "id": "banya",
+      "names": {
+        "ko": "러시안 바냐·사우나",
+        "en": "Russian Banya & Sauna"
+      },
+      "category": "activity",
+      "region": "mission",
+      "geo": {
+        "lat": 37.7622,
+        "lng": -122.4122,
+        "elevationM": 20
+      },
+      "schedule": {
+        "default": [
+          {
+            "open": 540,
+            "close": 1320,
+            "lastEntry": 1260
+          }
+        ],
+        "exceptions": []
+      },
+      "tariff": {
+        "unit": "person",
+        "selection": "firstMatch",
+        "tiers": [
+          {
+            "id": "adult",
+            "when": [],
+            "amount": 55,
+            "appliesTo": {
+              "ageMin": 18
+            },
+            "label": "성인 3시간",
+            "verify": "needs-check"
+          }
+        ]
+      },
+      "constraints": [
+        {
+          "id": "banya.genderDay",
+          "type": "segregation",
+          "severity": "enforced",
+          "requires": [],
+          "requiresGender": true,
+          "prepMinutes": 0,
+          "question": "이 사우나는 요일별로 이용 가능한 성별이 정해져 있습니다. 해당 날짜에 갈 수 있는지 확인하려면 성별을 알려주세요.",
+          "label": "요일별 성별 이용제",
+          "genderRules": [
+            {
+              "when": [
+                {
+                  "fact": "gender",
+                  "op": "eq",
+                  "value": "female"
+                },
+                {
+                  "fact": "weekday",
+                  "op": "in",
+                  "value": [
+                    1,
+                    3
+                  ]
+                }
+              ],
+              "status": "blocked",
+              "label": "월·수요일은 남성 전용 — 여성은 이 날짜에 이용 불가"
+            },
+            {
+              "when": [
+                {
+                  "fact": "gender",
+                  "op": "eq",
+                  "value": "male"
+                },
+                {
+                  "fact": "weekday",
+                  "op": "in",
+                  "value": [
+                    2,
+                    4
+                  ]
+                }
+              ],
+              "status": "blocked",
+              "label": "화·목요일은 여성 전용 — 남성은 이 날짜에 이용 불가"
+            }
+          ],
+          "verify": "needs-check"
+        },
+        {
+          "id": "banya.dress",
+          "type": "dressCode",
+          "severity": "enforced",
+          "requires": [
+            "swimwear"
+          ],
+          "requiresGender": false,
+          "prepMinutes": 10,
+          "label": "수영복·타월 지참 — 대여 가능(준비 10분)",
+          "verify": "needs-check"
+        }
+      ],
+      "demand": {
+        "queue": [],
+        "timedEntry": null
+      },
+      "tags": [
+        "indoor",
+        "ticketed",
+        "spa"
+      ],
+      "dwellMin": 120,
+      "outdoor": false,
+      "accessibility": {
+        "stepFree": true,
+        "stairs": 0,
+        "elevator": true,
+        "restAreas": 2,
+        "restroom": true,
+        "slopeM": 0,
+        "verify": "needs-check"
+      },
+      "verify": "needs-check",
+      "note": "요일별 성별 이용제 — 성별을 모르면 판정 불가. 성별이 일정 가능 여부를 직접 결정하는 사례."
+    }
+  ],
+  "transport": {
+    "defaultMode": "muni",
+    "modes": {
+      "walk": {
+        "speedKmh": 4.5,
+        "minMinutes": 3,
+        "fare": {
+          "kind": "flat",
+          "amount": 0
+        },
+        "label": "도보"
+      },
+      "muni": {
+        "boardingMin": 5,
+        "platformMin": 3,
+        "speedKmh": 17,
+        "fare": {
+          "kind": "flat",
+          "amount": 2.85
+        },
+        "fareNote": "Muni 단일 2.85(클리퍼) / 3.00(현금). 케이블카는 별도 9.00",
+        "label": "Muni"
+      },
+      "cable": {
+        "boardingMin": 6,
+        "speedKmh": 9,
+        "fare": {
+          "kind": "flat",
+          "amount": 9
+        },
+        "fareNote": "케이블카 단일권, 환승 불가",
+        "label": "케이블카"
+      },
+      "taxi": {
+        "boardingMin": 4,
+        "speedKmh": 20,
+        "fare": {
+          "kind": "formula",
+          "base": 3.5,
+          "perKm": 2.8
+        },
+        "label": "택시"
+      }
+    },
+    "routeFactor": 1.38,
+    "peakCongestion": [
+      {
+        "from": 420,
+        "to": 570,
+        "factor": 1.2
+      },
+      {
+        "from": 960,
+        "to": 1140,
+        "factor": 1.2
+      }
+    ],
+    "passes": [
+      {
+        "id": "muni-day",
+        "label": "Muni 1일권",
+        "durationMin": 1440,
+        "amount": 5.7,
+        "verify": "needs-check",
+        "sourceId": "sfmta-fares"
+      }
+    ]
+  },
+  "rules": [
+    {
+      "id": "sfo.rain.travel",
+      "target": "*",
+      "precedence": 10,
+      "when": [
+        {
+          "fact": "weather",
+          "op": "eq",
+          "value": "rain"
+        }
+      ],
+      "effect": {
+        "path": "travel",
+        "op": "multiply",
+        "value": 1.2
+      },
+      "label": "우천 이동 지연",
+      "verify": "estimated"
+    },
+    {
+      "id": "sfo.rain.advisory",
+      "target": "*",
+      "precedence": 40,
+      "when": [
+        {
+          "fact": "weather",
+          "op": "eq",
+          "value": "rain"
+        }
+      ],
+      "effect": {
+        "path": "warn",
+        "op": "append",
+        "value": "우천 — 알카트라즈·트윈픽스는 대체 일정 권장"
+      },
+      "label": "우천 대체 안내",
+      "verify": "estimated"
+    },
+    {
+      "id": "sfo.summer.queue",
+      "target": "tag:ticketed",
+      "precedence": 30,
+      "when": [
+        {
+          "fact": "daySets",
+          "op": "has",
+          "value": "summer"
+        }
+      ],
+      "effect": {
+        "path": "wait",
+        "op": "add",
+        "value": 20
+      },
+      "label": "여름 성수기 대기 +20분",
+      "verify": "estimated"
+    },
+    {
+      "id": "sfo.holiday.queue",
+      "target": "tag:ticketed",
+      "precedence": 30,
+      "when": [
+        {
+          "fact": "daySets",
+          "op": "has",
+          "value": "publicHoliday"
+        }
+      ],
+      "effect": {
+        "path": "wait",
+        "op": "add",
+        "value": 15
+      },
+      "label": "공휴일 대기 +15분",
+      "verify": "illustrative"
+    },
+    {
+      "id": "sfo.fleetweek.advisory",
+      "target": "*",
+      "precedence": 40,
+      "when": [
+        {
+          "fact": "daySets",
+          "op": "has",
+          "value": "fleetWeek"
+        }
+      ],
+      "effect": {
+        "path": "warn",
+        "op": "append",
+        "value": "함대 주간 — 워프·해변 혼잡, 항공 쇼 시간대 회피"
+      },
+      "label": "함대 주간 안내",
+      "verify": "needs-check"
+    }
+  ],
+  "policy": {
+    "entry": { "optimisticMin": { "value": 30, "grade": "needs-check", "sourceId": null }, "pessimisticMin": { "value": 90, "grade": "needs-check", "sourceId": null } },
+    "checkoutMin": { "value": 25, "grade": "estimated", "sourceId": null },
+    "checkinMin": { "value": 0, "grade": "needs-check", "sourceId": null },
+    "pace": {
+      "slow": { "value": 1.3, "grade": "needs-check", "sourceId": null },
+      "normal": { "value": 1, "grade": "needs-check", "sourceId": null },
+      "packed": { "value": 0.8, "grade": "needs-check", "sourceId": null }
+    },
+    "startDefault": { "value": 540, "grade": "needs-check", "sourceId": null },
+    "startRange": {
+      "min": 480,
+      "max": 720
+    },
+    "budgetDefault": { "value": 180, "grade": "needs-check", "sourceId": null },
+    "budgetRange": {
+      "min": 60,
+      "max": 600
+    },
+    "partyDefault": {
+      "adults": 1,
+      "children": 0,
+      "residency": "foreigner"
+    },
+    "verdict": {
+      "slackMin": { "value": 25, "grade": "needs-check", "sourceId": null },
+      "imminentMin": { "value": 5, "grade": "needs-check", "sourceId": null },
+      "thresholds": {
+        "returnHardMin": { "value": 1380, "grade": "needs-check", "sourceId": null },
+        "returnWarnMin": { "value": 1320, "grade": "needs-check", "sourceId": null },
+        "stopsMax": { "value": 6, "grade": "needs-check", "sourceId": null },
+        "travelFailMin": { "value": 150, "grade": "needs-check", "sourceId": null },
+        "travelWarnMin": { "value": 100, "grade": "needs-check", "sourceId": null },
+        "waitWarnMin": { "value": 30, "grade": "needs-check", "sourceId": null },
+        "budgetWarnRatio": { "value": 0.85, "grade": "needs-check", "sourceId": null }
+      },
+      "mealWindows": {
+        "lunch": {
+          "start": { "value": 690, "grade": "needs-check", "sourceId": null },
+          "end": { "value": 900, "grade": "needs-check", "sourceId": null }
+        },
+        "dinner": {
+          "start": { "value": 1080, "grade": "needs-check", "sourceId": null },
+          "end": { "value": 1260, "grade": "needs-check", "sourceId": null }
+        }
+      },
+      "profiles": {
+        "relaxed": {
+          "label": "여유",
+          "travelWarnMin": { "value": 120, "grade": "needs-check", "sourceId": null },
+          "stopsMax": { "value": 4, "grade": "needs-check", "sourceId": null },
+          "waitWarnMin": { "value": 35, "grade": "needs-check", "sourceId": null }
+        },
+        "normal": {
+          "label": "보통",
+          "travelWarnMin": { "value": 100, "grade": "needs-check", "sourceId": null },
+          "stopsMax": { "value": 6, "grade": "needs-check", "sourceId": null },
+          "waitWarnMin": { "value": 30, "grade": "needs-check", "sourceId": null }
+        },
+        "efficient": {
+          "label": "효율",
+          "travelWarnMin": { "value": 170, "grade": "needs-check", "sourceId": null },
+          "stopsMax": { "value": 8, "grade": "needs-check", "sourceId": null },
+          "waitWarnMin": { "value": 50, "grade": "needs-check", "sourceId": null }
+        }
+      }
+    },
+    "mobility": {
+      "askAge": true,
+      "askGender": "optional",
+      "askHealth": "optional",
+      "showAnswerSkipping": true,
+      "localOnly": true,
+      "note": "성별은 이동 파라미터에 사용하지 않는다. 복장 규정·시설 매칭에만 사용."
+    }
+  },
+  "goldenCases": [
+    {
+      "id": "S1",
+      "name": "워프·노스비치 기준안",
+      "date": "2026-09-15",
+      "plannedOn": "2026-07-01",
+      "lodging": "wharf",
+      "mode": "muni",
+      "pace": "normal",
+      "start": 540,
+      "weather": "clear",
+      "plan": [
+        "pier39",
+        "ferrybldg",
+        "coittower",
+        "lombard"
+      ],
+      "expect": {
+        "endAt": 884,
+        "travelMin": 63,
+        "cost": 53.6,
+        "failCount": 0,
+        "askCount": 0
+      }
+    },
+    {
+      "id": "S2",
+      "name": "알카트라즈 — 90일 예약 못 지킨 경우",
+      "date": "2026-09-15",
+      "plannedOn": "2026-08-20",
+      "lodging": "wharf",
+      "mode": "muni",
+      "pace": "normal",
+      "start": 540,
+      "weather": "clear",
+      "plan": [
+        "alcatraz",
+        "pier39",
+        "ferrybldg"
+      ],
+      "expect": {
+        "endAt": 979,
+        "travelMin": 74,
+        "cost": 91.6,
+        "failCount": 1,
+        "askCount": 0
+      }
+    },
+    {
+      "id": "S3",
+      "name": "알카트라즈 — 90일 전 예약한 경우",
+      "date": "2026-09-15",
+      "plannedOn": "2026-06-01",
+      "lodging": "wharf",
+      "mode": "muni",
+      "pace": "normal",
+      "start": 540,
+      "weather": "clear",
+      "plan": [
+        "alcatraz",
+        "pier39",
+        "ferrybldg"
+      ],
+      "expect": {
+        "endAt": 979,
+        "travelMin": 74,
+        "cost": 91.6,
+        "failCount": 0,
+        "askCount": 0
+      }
+    },
+    {
+      "id": "S4",
+      "name": "월요일 — 드 영 휴관",
+      "date": "2026-09-14",
+      "plannedOn": "2026-07-01",
+      "lodging": "sunset",
+      "mode": "muni",
+      "pace": "normal",
+      "start": 570,
+      "weather": "clear",
+      "plan": [
+        "deyoung",
+        "ggpark",
+        "twinpeaks"
+      ],
+      "expect": {
+        "endAt": 797,
+        "travelMin": 87,
+        "cost": 11.6,
+        "failCount": 1,
+        "askCount": 0
+      }
+    },
+    {
+      "id": "S5",
+      "name": "구릉 도보·세금·팁",
+      "date": "2026-09-15",
+      "plannedOn": "2026-07-01",
+      "lodging": "northbeach",
+      "mode": "walk",
+      "pace": "normal",
+      "start": 600,
+      "weather": "rain",
+      "plan": [
+        "lombard",
+        "coittower",
+        "dolores"
+      ],
+      "expect": {
+        "endAt": 864,
+        "travelMin": 129,
+        "cost": 33.2,
+        "failCount": 0,
+        "askCount": 0
+      }
+    },
+    {
+      "id": "M4",
+      "name": "도보 동선 · 28세 표준",
+      "date": "2026-09-15",
+      "plannedOn": "2026-07-01",
+      "lodging": "wharf",
+      "mode": "walk",
+      "pace": "normal",
+      "start": 540,
+      "weather": "clear",
+      "plan": [
+        "pier39",
+        "coittower",
+        "lombard",
+        "unionsq",
+        "ferrybldg"
+      ],
+      "mobility": {
+        "ageBand": "young",
+        "profileId": "standard",
+        "flags": []
+      },
+      "expect": {
+        "endAt": 971,
+        "travelMin": 105,
+        "cost": 47.8,
+        "failCount": 0,
+        "askCount": 0
+      }
+    },
+    {
+      "id": "M5",
+      "name": "도보 동선 · 휠체어(자동 대체)",
+      "date": "2026-09-15",
+      "plannedOn": "2026-07-01",
+      "lodging": "wharf",
+      "mode": "walk",
+      "pace": "normal",
+      "start": 540,
+      "weather": "clear",
+      "plan": [
+        "pier39",
+        "coittower",
+        "lombard",
+        "unionsq",
+        "ferrybldg"
+      ],
+      "mobility": {
+        "profileId": "wheelchair",
+        "flags": []
+      },
+      "expect": {
+        "endAt": 905,
+        "travelMin": 94,
+        "cost": 43.6,
+        "failCount": 2,
+        "askCount": 0
+      }
+    },
+    {
+      "id": "M6",
+      "name": "도보 동선 · 68세 무릎+심폐",
+      "date": "2026-09-15",
+      "plannedOn": "2026-07-01",
+      "lodging": "wharf",
+      "mode": "walk",
+      "pace": "normal",
+      "start": 540,
+      "weather": "clear",
+      "plan": [
+        "pier39",
+        "coittower",
+        "lombard",
+        "unionsq",
+        "ferrybldg"
+      ],
+      "mobility": {
+        "ageBand": "senior",
+        "profileId": "senior",
+        "flags": [
+          "knee",
+          "heartLung"
+        ]
+      },
+      "expect": {
+        "endAt": 946,
+        "travelMin": 80,
+        "cost": 56.5,
+        "failCount": 0,
+        "askCount": 0
+      }
+    },
+    {
+      "id": "G1",
+      "name": "사우나 · 성별 미입력 → 질문만 발생",
+      "date": "2026-09-16",
+      "plannedOn": "2026-07-01",
+      "lodging": "mission",
+      "mode": "muni",
+      "pace": "normal",
+      "start": 600,
+      "weather": "clear",
+      "plan": [
+        "banya",
+        "dolores"
+      ],
+      "gender": null,
+      "expect": {
+        "endAt": 825,
+        "travelMin": 35,
+        "cost": 78.2,
+        "failCount": 0,
+        "askCount": 1
+      }
+    },
+    {
+      "id": "G2",
+      "name": "여성 · 수요일 (남성 전용일 → 불가)",
+      "date": "2026-09-16",
+      "plannedOn": "2026-07-01",
+      "lodging": "mission",
+      "mode": "muni",
+      "pace": "normal",
+      "start": 600,
+      "weather": "clear",
+      "plan": [
+        "banya",
+        "dolores"
+      ],
+      "gender": "female",
+      "expect": {
+        "endAt": 825,
+        "travelMin": 35,
+        "cost": 78.2,
+        "failCount": 1,
+        "askCount": 0
+      }
+    },
+    {
+      "id": "G3",
+      "name": "여성 · 화요일 (여성 전용일 → 가능)",
+      "date": "2026-09-15",
+      "plannedOn": "2026-07-01",
+      "lodging": "mission",
+      "mode": "muni",
+      "pace": "normal",
+      "start": 600,
+      "weather": "clear",
+      "plan": [
+        "banya",
+        "dolores"
+      ],
+      "gender": "female",
+      "expect": {
+        "endAt": 825,
+        "travelMin": 35,
+        "cost": 78.2,
+        "failCount": 0,
+        "askCount": 0
+      }
+    },
+    {
+      "id": "G4",
+      "name": "남성 · 수요일 (남성 전용일 → 가능)",
+      "date": "2026-09-16",
+      "plannedOn": "2026-07-01",
+      "lodging": "mission",
+      "mode": "muni",
+      "pace": "normal",
+      "start": 600,
+      "weather": "clear",
+      "plan": [
+        "banya",
+        "dolores"
+      ],
+      "gender": "male",
+      "expect": {
+        "endAt": 825,
+        "travelMin": 35,
+        "cost": 78.2,
+        "failCount": 0,
+        "askCount": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+var e=new URL(`singapore.pack.v2-Caf32T6l.json`,import.meta.url).href;export{e as default};
