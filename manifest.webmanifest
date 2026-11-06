@@ -1,6 +1,6 @@
 {
-  "name": "여행 시뮬레이터",
-  "short_name": "여행시뮬",
+  "name": "이 여행, 될까?",
+  "short_name": "여행될까",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
