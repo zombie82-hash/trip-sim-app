@@ -1,1 +1,0 @@
-var e=new URL(`prague.pack.v2-AU-bMSoJ.json`,import.meta.url).href;export{e as default};

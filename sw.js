@@ -1,8 +1,8 @@
 /* 서비스 워커.
  * - 화면(index.html) 요청: 네트워크 우선(no-cache), 실패하면 캐시. 새 팩 버전이 담긴 새 빌드가 바로 전달된다.
  * - 해시가 붙은 자원·그 밖의 같은 출처 GET: stale-while-revalidate.
- * 캐시 이름을 바꾸면(릴리스마다 올린다) activate 에서 이전 캐시를 모두 지운다. */
-const CACHE = 'tripsim-v12';
+ * 캐시 이름을 바꾸면(릴리스마다 올린다) activate 에서 이 앱의 이전 캐시(tripsim-*)만 지운다. */
+const CACHE = 'tripsim-v13';
 /** 화면 요청이 이 시간 안에 응답하지 않으면 캐시로 물러선다 (연결이 매달린 경우) */
 const NAV_TIMEOUT_MS = 4000;
 const SCOPE = self.registration.scope;
@@ -52,7 +52,8 @@ self.addEventListener('install', event => {
 
 self.addEventListener('activate', event => {
   event.waitUntil((async () => {
-    for (const key of await caches.keys()) if (key !== CACHE) await caches.delete(key);
+    // 같은 출처(github.io)의 다른 앱 캐시를 지우지 않는다: 이 앱 이름(tripsim-)으로 시작하는 옛 캐시만 지운다
+    for (const key of await caches.keys()) if (key !== CACHE && key.startsWith('tripsim-')) await caches.delete(key);
     await self.clients.claim();
   })());
 });
