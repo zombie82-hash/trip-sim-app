@@ -1,0 +1,1 @@
+var e=new URL(`singapore.pack.v2-Brlel6Jf.json`,import.meta.url).href;export{e as default};
